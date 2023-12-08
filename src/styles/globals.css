@@ -1,0 +1,96 @@
+/* Reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Site setting */
+:root {
+}
+
+.theme-core {
+  --cl-primary-main: rgb(255, 51, 102);
+  --cl-primary-base: rgb(209, 0, 209);
+  --cl-primary-light: rgb(247, 37, 133);
+  --cl-primary-dark: rgb(181, 23, 158);
+
+  --cl-secondary-main: #b0d8f5;
+  --cl-secondary-base: #87cdf0;
+  --cl-secondary-light: #d5e9fa;
+  --cl-secondary-dark: #82c7eb;
+}
+
+.skin-dark {
+  --cl-border-main: var(--cl-primary-main);
+  --cl-border-secondary: var(--cl-primary-base);
+
+  --cl-link: var(--cl-primary-light);
+  --cl-link-hover: var(--cl-primary-dark);
+
+  --cl-shadow-soft: rgba(0, 0, 0, 0.1);
+  --cl-shadow-hard: rgba(0, 0, 0, 0.4);
+
+  --cl-text-primary: rgb(248, 249, 250);
+  --cl-text-secondary: rgb(222, 226, 230);
+  --cl-text-tertiary: rgb(173, 181, 189);
+
+  --cl-button-text: rgb(248, 249, 250);
+  --cl-button-background: var(--cl-primary-main);
+  --cl-button-hover: var(--cl-primary-light);
+
+  --cl-input-background: rgb(39, 40, 41);
+  --cl-input-focus: rgb(50, 54, 67);
+
+  --cl-bg-alt: rgb(40, 40, 40);
+  --cl-bg-accent: rgb(30, 30, 30);
+  --cl-bg-main: rgb(20, 20, 20);
+  --cl-bg-global: rgb(0, 0, 0);
+}
+
+.skin-light {
+  --cl-border-main: var(--cl-primary-main);
+  --cl-border-secondary: var(--cl-primary-base);
+
+  --cl-link: var(--cl-primary-light);
+  --cl-link-hover: var(--cl-primary-dark);
+
+  --cl-shadow-soft: rgba(0, 0, 0, 0.1);
+  --cl-shadow-hard: rgba(0, 0, 0, 0.4);
+
+  --cl-text-primary: rgb(33, 37, 41);
+  --cl-text-secondary: rgb(73, 80, 87);
+  --cl-text-tertiary: rgb(108, 117, 125);
+
+  --cl-button-background: var(--cl-primary-main);
+  --cl-button-hover: var(--cl-primary-light);
+
+  --cl-button-text: rgb(248, 249, 250);
+  --cl-input-background: rgb(173, 181, 189);
+  --cl-input-focus: rgb(206, 212, 218);
+
+  --cl-bg-alt: rgb(206, 212, 218);
+  --cl-bg-accent: rgb(222, 226, 230);
+  --cl-bg-main: rgb(238, 238, 238);
+  --cl-bg-global: rgb(247, 247, 247);
+}
+
+body {
+  background: var(--cl-bg-global);
+  height: 100vh;
+  min-width: 800px;
+  display: flex;
+  padding: 10px;
+}
+
+/* Toast style */
+.Toastify__toast {
+  padding: 10px;
+  border-radius: 15px;
+  background: var(--cl-back-header);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}

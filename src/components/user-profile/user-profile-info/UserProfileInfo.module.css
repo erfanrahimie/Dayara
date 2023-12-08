@@ -1,0 +1,98 @@
+.profile {
+  padding: 25px 25px;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+  height: fit-content;
+  display: flex;
+  align-items: stretch;
+}
+
+.details {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.profileImage {
+  border-radius: 100%;
+}
+
+.information {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  color: var(--cl-text-primary);
+  font-size: 1.5rem;
+}
+
+.biography {
+  font-size: 0.9rem;
+  color: var(--cl-text-secondary);
+}
+
+.websiteLink {
+  color: var(--cl-primary-light);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: top;
+}
+
+.websiteLink > svg {
+  margin-right: 5px;
+  width: 17px;
+  height: 17px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.statusBar{
+  align-self: center;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  list-style: none;
+}
+
+.statusBar > li {
+  font-size: 1rem;
+  display: flex;
+  gap: 5px;
+  background-color: var(--cl-bg-accent);
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: var(--cl-text-secondary);
+}
+
+.statusBar > li > span {
+  font-weight: bold;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+.socialLinks > a{
+  display: flex;
+  gap: 10px;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: var(--cl-primary-light);
+  color: var(--cl-button-text);
+}
+
+.socialLinks > a > svg{
+  width: 20px;
+  height: 20px;
+}

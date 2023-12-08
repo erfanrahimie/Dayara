@@ -1,0 +1,67 @@
+.container {
+  background-color: var(--color-background-dark);
+  background-image: url('/background/auth-page.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.signinContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signinBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  background: var(--cl-back-header);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.infoBox {
+  text-align: center;
+  border-bottom: 1px solid var(--color-white-dark);
+  padding: 1rem;
+  width: 100%;
+}
+
+.infoBox > h1 {
+  color: var(--color-primary-dark);
+  font-size: 1.7rem;
+}
+
+.infoBox > p {
+  color: var(--color-white-dark);
+  font-size: 1rem;
+}
+
+.formBox {
+  padding: 1rem 0.5rem;
+}
+
+.otherOption {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-white);
+}
+
+.otherOption a {
+  text-decoration: none;
+  transition: color 0.3s;
+  color: var(--color-primary-dark);
+}
+
+.otherOption a:hover {
+  text-decoration: none;
+  color: var(--color-primary);
+}
