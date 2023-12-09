@@ -1,13 +1,13 @@
-'use client';
-import { ROOT_ROUTES } from '@/constants/routes/root';
-import { SIDEBAR_ITEMS } from '@/constants/sidebar';
-import { usePathname } from 'next/navigation';
-import { RiApps2Line } from 'react-icons/ri';
-import { useRef, useState } from 'react';
-import UserProfileImage from '../user-profile/UserImage';
-import styles from './Sidebar.module.css';
-import Link from 'next/link';
-import gsap from 'gsap';
+'use client'
+import { ROOT_ROUTES } from '@/constants/routes/root'
+import { SIDEBAR_ITEMS } from '@/constants/sidebar'
+import { usePathname } from 'next/navigation'
+import { RiApps2Line } from 'react-icons/ri'
+import { useRef, useState } from 'react'
+import UserImage from '@/components/shared/user-profile/UserImage'
+import styles from './Sidebar.module.css'
+import Link from 'next/link'
+import gsap from 'gsap'
 
 /**
  * Animates element
@@ -20,17 +20,17 @@ export function animateElement(element, properties) {
     ...properties,
     duration: 0.35,
     ease: 'power3.out',
-  });
+  })
 }
 
 /**
  * Main Sidebar Component
  */
 export default function Sidebar() {
-  const pathName = usePathname(); // Get current pathname
-  const menuItemsRef = useRef([]); // Holds animation elements
-  const infoTextRef = useRef(); // Info text ref
-  const [selectedItem, setSelectedItem] = useState(null); // Current menu item
+  const pathName = usePathname() // Get current pathname
+  const menuItemsRef = useRef([]) // Holds animation elements
+  const infoTextRef = useRef() // Info text ref
+  const [selectedItem, setSelectedItem] = useState(null) // Current menu item
 
   /**
    * Animates menu item on mouse enter & leave
@@ -44,13 +44,13 @@ export default function Sidebar() {
       setSelectedItem({
         text: SIDEBAR_ITEMS[index].text,
         location: menuItemsRef.current[index].getBoundingClientRect(),
-      });
+      })
 
       // GSAP enter animation
-      animateElement(infoTextRef.current, { opacity: 1, x: 15 });
+      animateElement(infoTextRef.current, { opacity: 1, x: 15 })
     } else if (status === 'leave') {
       // GSAP leave animation
-      animateElement(infoTextRef.current, { opacity: 0, x: 0 });
+      animateElement(infoTextRef.current, { opacity: 0, x: 0 })
     }
   }
 
@@ -58,7 +58,7 @@ export default function Sidebar() {
     // Markup for sidebar
     <nav className={styles.sidebar}>
       {/* Profile image */}
-      <UserProfileImage width={36} height={36} className={styles.profileImage} />
+      <UserImage styles={styles} width={36} height={36} />
 
       {/* Menu items list */}
       <menu className={styles.menuList}>
@@ -98,5 +98,5 @@ export default function Sidebar() {
         {selectedItem && selectedItem.text}
       </div>
     </nav>
-  );
+  )
 }

@@ -40,6 +40,7 @@
   font-weight: bold;
   text-decoration: none;
   display: flex;
+  width: fit-content;
   align-items: top;
 }
 

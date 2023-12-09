@@ -1,14 +1,17 @@
 import Image from 'next/image';
 
-export default function UserImage({ width, height, className }) {
+/**
+ * Displays user profile image
+ */
+export default function UserImage({ styles, width, height }) {
   return (
     <Image
       // Image attributes
-      className={className}
+      className={styles.profileImage}
       src="/assets/images/profile/test.jpg"
       width={width}
       height={height}
-      alt="Profile"
+      alt="profile-image"
     />
   );
 }

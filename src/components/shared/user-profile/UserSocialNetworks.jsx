@@ -1,28 +1,24 @@
-import { RiDiscordLine, RiTwitterLine, RiInstagramLine, RiGithubLine } from 'react-icons/ri';
+import { RiDiscordLine, RiTwitterLine, RiInstagramLine, RiGithubLine } from 'react-icons/ri'
 
-export default function UserSocialNetworks({ className }) {
+/**
+ * Displays user social network links
+ */
+export default function UserSocialNetworks({ styles }) {
   return (
-    <div className={className}>
-      <a
-        href=""
-      >
+    // Container for social network links
+    <div className={styles.socialLinks}>
+      <a href="">
         <RiDiscordLine />
       </a>
-      <a
-        href=""
-      >
+      <a href="">
         <RiTwitterLine />
       </a>
-      <a
-        href=""
-      >
+      <a href="">
         <RiInstagramLine />
       </a>
-      <a
-        href=""
-      >
+      <a href="">
         <RiGithubLine />
       </a>
     </div>
-  );
+  )
 }
